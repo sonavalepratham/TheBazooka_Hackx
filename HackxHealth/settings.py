@@ -25,7 +25,7 @@ SECRET_KEY = '_3aa5tg%6=(-fzm)4b$!9-(h09i_yn2(k9usuofytumv5474u5'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['127.0.0.1', 'sampledomain.com']
+ALLOWED_HOSTS = ['127.0.0.1', 'curativehackx.herokuapp.com']
 
 
 # Application definition
