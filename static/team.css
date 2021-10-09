@@ -1,0 +1,217 @@
+body, html {
+    margin: 0;
+    overflow-x: hidden;
+}
+
+nav {
+    background: #000000;
+    height: 80px;
+    width: 100%;
+    z-index: 2;
+    position: relative;
+    /*top: -18px;*/
+}
+
+label.logo {
+    color: white;
+    font-size: 35px;
+    line-height: 80px;
+    padding: 0 100px;
+    font-weight: bold;
+}
+
+nav ul {
+    float: right;
+    margin-right: 20px;
+}
+
+nav ul li {
+    display: inline-block;
+    line-height: 80px;
+    margin: 0 5px;
+}
+
+nav ul li a {
+    color: white;
+    font-size: 17px;
+    padding: 7px 13px;
+    border-radius: 3px;
+    text-transform: uppercase;
+}
+
+a.active, a:hover {
+    background: #1b9bff;
+    transition: .5s;
+}
+
+.checkbtn {
+    font-size: 30px;
+    color: white;
+    float: right;
+    line-height: 80px;
+    margin-right: 40px;
+    cursor: pointer;
+    display: none;
+}
+
+#check {
+    display: none;
+}
+
+@media (max-width: 952px) {
+    label.logo {
+        font-size: 30px;
+        padding-left: 50px;
+    }
+
+    nav ul li a {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 858px) {
+    .checkbtn {
+        display: block;
+    }
+
+    ul {
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        background: #000;
+        top: 80px;
+        left: -100%;
+        text-align: center;
+        transition: all .5s;
+    }
+
+    nav ul li {
+        display: block;
+        margin: 50px 0;
+        line-height: 30px;
+    }
+
+    nav ul li a {
+        font-size: 20px;
+    }
+
+    a:hover, a.active {
+        background: none;
+        color: #0082e6;
+    }
+
+    #check:checked ~ ul {
+        left: 0;
+    }
+}
+
+.head {
+    background: url("./team_img.jpg") no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    width: 100%;
+    height: 100vh;
+    text-align: center;
+}
+
+.head_text {
+    position: relative;
+    top: 40%;
+    text-align: center;
+    background-color: #00000094;
+    color: white;
+    padding: 30px;
+    margin: 0 30%;
+    border-radius: 50px;
+}
+
+.head_text h1 {
+    font-weight: bold;
+    font-size: 4rem;
+}
+
+@media (max-width: 778px) {
+    .head_text {
+        margin: 0 10%;
+    }
+}
+
+.description {
+    margin: 50px auto;
+}
+
+.description h2 {
+    text-align: center;
+    padding: 20px 0;
+    line-height: 1.4;
+    font-size: 3rem;
+    font-weight: bold;
+}
+
+.description p {
+    font-size: 22px;
+}
+
+
+/*card*/
+
+.card {
+    text-align: center;
+    margin: 30px auto;
+    width: 80%;
+    border-radius: 30px;
+    background-color: #ffffff;
+    box-shadow: 0px 0px 30px 1px #454545;
+
+}
+
+.card-top {
+    height: 120px;
+    background-image: url("./bg-pattern-card.svg");
+    border-top-right-radius: 30px;
+    border-top-left-radius: 30px;
+    background-repeat: repeat;
+    background-size: cover;
+}
+
+.card-img {
+    position: relative;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: 6px solid white;
+    top: 75px;
+}
+
+.card-main {
+    padding-top: 70px;
+}
+
+.card-main-top {
+    padding-bottom: 10px;
+}
+
+.card-main-bottom {
+    padding: 5px 10px;
+}
+
+.card-main-bottom p{
+    color: #454545;
+    font-size: 18px;
+}
+
+.light-text {
+    color: hsl(0, 0%, 59%);
+    font-weight: 400;
+    font-family: 'Kumbh Sans', sans-serif;
+    line-height: 1.2;
+}
+
+.card-maintext {
+    line-height: 1.5;
+    font-weight: 700;
+    font-family: 'Kumbh Sans', sans-serif;
+    font-size: 18px;
+}

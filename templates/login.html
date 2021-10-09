@@ -1,0 +1,116 @@
+{% load static %}
+<!DOCTYPE html>
+
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="utf-8">
+    <title>Login and Registration Form</title>
+    <link rel="stylesheet" href="{% static 'login_style.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+</head>
+<body>
+<nav>
+    <input type="checkbox" id="check">
+    <label for="check" class="checkbtn">
+        <i class="fas fa-bars"></i>
+    </label>
+    <label class="logo">Curative</label>
+    <ul>
+       <li><a class="active" href="{%url 'login'%}">Login/SignUp</a></li>
+        <li><a href="{%url 'index'%}">ChatBot</a></li>
+        <li><a href="{%url 'table'%}">Timeline</a></li>
+        <li><a href="{%url 'team'%}">Team</a></li>
+    </ul>
+</nav>
+<div class="wrapper">
+    <div class="title-text">
+        <div class="title login">
+            Login Form
+        </div>
+        <div class="title signup">
+            Signup Form
+        </div>
+    </div>
+    <div class="form-container">
+        <div class="slide-controls">
+            <input type="radio" name="slide" id="login" checked>
+            <input type="radio" name="slide" id="signup">
+            <label for="login" class="slide login">Login</label>
+            <label for="signup" class="slide signup">Signup</label>
+            <div class="slider-tab"></div>
+        </div>
+        <div class="form-inner">
+            <form action="#" method="post" class="login" style="margin-top:50px">
+            {% csrf_token %}
+                <div class="field">
+                    <input type="text" placeholder="Email Address" name="usrnm" required>
+                </div>
+                <div class="field">
+                    <input type="password" name="pass" placeholder="Password" required>
+                </div>
+                <!-- <div class="pass-link">
+                   <a href="#">Forgot password?</a>
+                </div> -->
+                <div class="field btn">
+                    <div class="btn-layer"></div>
+                    <input type="submit" value="Login">
+                </div>
+                <div class="signup-link">
+                    Not a member? <a href="">Signup now</a>
+                </div>
+            </form>
+            <form action="Register" method="post" class="signup">
+                <div class="field">
+                    <input type="text" name="f_nm" placeholder="First Name" required>
+                </div>
+                <div class="field">
+                    <input type="text" name="l_nm" placeholder="Last Name" required>
+                </div>
+                <div class="field">
+                    <input type="text" name="email" placeholder="Email Address" required>
+                </div>
+                <div class="field">
+                    <input type="text" name="age" placeholder="Age" required>
+                </div>
+                <select name="sex" class="field">
+                    <option>Male</option>
+                    <option>Female</option>
+                </select>
+                <div class="field">
+                    <input name="pass1" type="password" placeholder="Password" required>
+                </div>
+                <div class="field">
+                    <input name="pass2" type="password" placeholder="Confirm password" required>
+                </div>
+                {% csrf_token %}
+                <div class="field btn">
+                    <div class="btn-layer"></div>
+                    <input type="submit" value="Signup">
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+<script>
+    const loginText = document.querySelector(".title-text .login");
+    const loginForm = document.querySelector("form.login");
+    const loginBtn = document.querySelector("label.login");
+    const signupBtn = document.querySelector("label.signup");
+    const signupLink = document.querySelector("form .signup-link a");
+    signupBtn.onclick = (() => {
+        loginForm.style.marginLeft = "-50%";
+        loginText.style.marginLeft = "-50%";
+    });
+    loginBtn.onclick = (() => {
+        loginForm.style.marginLeft = "0%";
+        loginText.style.marginLeft = "0%";
+    });
+    signupLink.onclick = (() => {
+        signupBtn.click();
+        return false;
+    });
+</script>
+</body>
+</html>

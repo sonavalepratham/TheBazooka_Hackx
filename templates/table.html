@@ -1,0 +1,38 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+    <title>Patient timeline</title>
+    <link rel="stylesheet" href="{% static 'table.css' %}">
+</head>
+<body>
+<nav>
+    <input type="checkbox" id="check">
+    <label for="check" class="checkbtn">
+        <i class="fas fa-bars"></i>
+    </label>
+    <label class="logo">Curative</label>
+    <ul>
+        <li><a class="active" href="{%url 'login'%}">Login/SignUp</a></li>
+        <li><a href="{%url 'index'%}">ChatBot</a></li>
+        <li><a href="{%url 'table'%}">Timeline</a></li>
+        <li><a href="{%url 'team'%}">Team</a></li>
+    </ul>
+</nav>
+<div class="timeline">
+{% for i, j in syo %}
+    <div class="container {{j}}">
+        <div class="content">
+            <h2>{{i.pos_dis}}</h2>
+            <p>{{i.time}}</p>
+            <p>{{i.symptoms}}</p>
+        </div>
+    </div>
+{% endfor %}
+
+</div>
+</body>
+</html>
