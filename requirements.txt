@@ -108,7 +108,6 @@ PyMySQL==0.10.0
 pyparsing==2.4.7
 PyPDF2==1.26.0
 pyperclip==1.8.0
-pypiwin32==223
 pyreadline==2.1
 pyreadline3==3.3
 PyRect==0.1.4
