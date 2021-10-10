@@ -119,3 +119,6 @@ def Table(request):
             cnt+=1
         return render(request,'table.html', {'syo':zip(sym_obj, lr)})
     return HttpResponseRedirect(reverse('login'))
+
+def pharmacy(request):
+    return render(request,'carousel.html')

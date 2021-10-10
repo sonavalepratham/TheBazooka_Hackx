@@ -11,5 +11,6 @@ urlpatterns = [
     path('storesymptoms',views.storesymptoms,name='storesymptoms'),
     path('table',views.Table,name='table'),
     path('team',views.team,name='team'),
+    path('pharmacy',views.pharmacy,name='pharmacy'),
 ] 
 # + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
