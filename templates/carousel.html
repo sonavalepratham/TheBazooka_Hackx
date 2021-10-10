@@ -1,0 +1,125 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="/docs/4.0/assets/img/favicons/favicon.ico">
+
+    <title>Pharmacy Apps in India</title>
+
+    <link rel="canonical" href="https://getbootstrap.com/docs/4.0/examples/carousel/">
+
+    <!-- Bootstrap core CSS -->
+    <link href="https://getbootstrap.com/docs/4.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="{% static 'carousel.css' %}" rel="stylesheet">
+  </head>
+  <body>
+        <nav>
+            <input type="checkbox" id="check">
+            <label for="check" class="checkbtn">
+                <i class="fas fa-bars"></i>
+            </label>
+            <label class="logo">Curative</label>
+            <ul>
+       {% if user.is_authenticated %}
+        <li><a class="active" href="{%url 'login'%}">{{user.get_full_name}}</a></li>
+    {% else %}
+        <li><a class="active" href="{%url 'login'%}">Login/SignUp</a></li>
+    {% endif %}
+        <li><a href="{%url 'index'%}">ChatBot</a></li>
+        <li><a href="{%url 'table'%}">Timeline</a></li>
+        <li><a href="{%url 'team'%}">Team</a></li>
+        <li><a href="{%url 'logout'%}">Logout</a></li>
+        <li><a  class="active" href="{%url 'pharmacy'%}">Pharmacy apps</a></li>
+    </ul>
+        </nav>
+
+
+    <main role="main">
+
+      <div id="myCarousel" class="carousel slide" data-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img class="first-slide" src="https://ideausher.com/wp-content/uploads/2020/05/5eb92d28cf77a1.png" alt="First slide">
+            <div class="container">
+              <div class="carousel-caption text-left">
+                <h1>6 Top Apps to Order Medicine Online in India</h1>
+                <p>Given the COVID-19 lockdown and incessant monsoons, online pharmacies are a great option to buy your medicines now, as opposed to walking to your local medical store; and they offer tons of benefits to boot.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+      </div>
+
+
+      <!-- Marketing messaging and featurettes
+      ================================================== -->
+      <!-- Wrap the rest of the page in another container to center all the content. -->
+
+      <div class="container marketing">
+
+        <!-- Three columns of text below the carousel -->
+        <div class="row">
+          <div class="col-lg-4">
+            <img class="rounded-circle" src="https://seeklogo.com/images/N/netmeds-logo-4A3580CB35-seeklogo.com.png" alt="Generic placeholder image" width="140" height="140">
+            <h2>NetMeds</h2>
+            <p>With a legacy of over 100 years in the pharma business, Netmeds is a leading online pharmacy in India with a pan-India presence.  It delivers life-saving drugs to every state, ensuring no-hassle delivery. Netmeds ensures that you never run out of vital medicines. You can set up your subscription and medicines will be delivered automatically to you every month. With its loyalty programs, you can also save quite a bit.</p>
+            <p><a class="btn btn-secondary" href="https://www.netmeds.com/" role="button">View details &raquo;</a></p>
+          </div><!-- /.col-lg-4 -->
+          <div class="col-lg-4">
+            <img class="rounded-circle" src="https://digital.hbs.edu/platform-digit/wp-content/uploads/sites/2/2020/03/practo-logo.jpg" alt="Generic placeholder image" width="140" height="140">
+            <h2>Practo</h2>
+            <p>Practo is among India's most reliable online medical stores. With an extensive catalog of medicines and healthcare products, the app offers hassle-free service across 100+ cities in India. The app offers an automated prescription refill option and allows you to check your medicine order history and re-order. </p>
+            <p><a class="btn btn-secondary" href="https://www.practo.com/" role="button">View details &raquo;</a></p>
+          </div><!-- /.col-lg-4 -->
+          <div class="col-lg-4">
+            <img class="rounded-circle" src="https://res.cloudinary.com/du8msdgbj/image/upload/v1572505985/logo_rebrand_vqptae.png" alt="Generic placeholder image" width="140" height="140">
+            <h2>1mg</h2>
+            <p>1mg is a leading digital healthcare platform where you can buy medicines online. With quality service, this app enables hassle-free service in 1000+ cities across India powered by its tie-up with licensed and verified pharmacies. It provides accurate, authoritative and trustworthy information on medicines. The best part of the app is that you can enter the names of medicines and get cheaper alternatives with the same compound. Based on the medicines you order, this app offers health tips from eminent doctors.</p>
+            <p><a class="btn btn-secondary" href="https://www.1mg.com/" role="button">View details &raquo;</a></p>
+          </div><!-- /.col-lg-4 -->
+        </div><!-- /.row -->
+        <div class="row">
+            <div class="col-lg-4">
+              <img class="rounded-circle" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOEAAADhCAMAAAAJbSJIAAAAflBMVEX///8MkG0AjmoAjGcAiGIAh2EAjGgAi2S618zt9PDc6uWLvqv///5usZtVpYporZZeqJAymXpAnYCjybuFvKf1+ffP5Nx7t6IkknHV5+Dc7efG3tWmy77u9vOVw7PA2dBIoYWx0sYAglinzr+Rw7I+n3+bxLUplnXO4NtzsJ2n5+jsAAAIYElEQVR4nO2baWOiSBCGoQ8aAbkmBIwnxtGd//8Ht6sPDo+JMaiLW08+RJGjXrq6qk/HQRAEQRAEQRAEQRAEQRAEQRAEQRAEQRAEQRAEQRAEQRAEQRAEQRAEQRAEQe5MNAk+JurDsy25B8W6PHAmGOebVfBsY+7AJCTCI66CUL6Zv1g5RqVH3S5ExMtnGzUkPu3rUxqZ/2yzhmPKyYlACV8927CBKPJOARKPtmpZ+GzbBmHpNpIoO6RvZeyKphT3z7ZuAJaVFSjcnUkS89/MSnx/rnUD0AgkfFeoIypHfDJzuCqeat7PaQTS/KP3w4fxXTryqtjUQTZ1jjL8xDPSR50WmxJk5emP77ou0jEHm78KdJw3nUQOjzZrOFoXPSvQKbSf8smD7RqML0pQkqgTxPqhZg1HW4Jvl06pVeanvx5p1nA0JSguCjSxhu4eaNZwfO2ikhkbb0b8Ksho5uMtw6tK0HEWKl2I+lFmDceVAk0sZeNrfLcCLwcZINKn8dG1vYuv04TGFxWclj3GrAEp6VUu6ji5TvjjG8o4kOsErnXLm398cd5/D100Xwp0dG0l8SNsGpaaw0jhlwJNz4LNH2HTwOwpp0eVK3KW63XR7QK/cz22sRnlyHcRnCSANRPM6ya+UBfhaDsWxwXjQy+CdCWGdgz1NeZofO2S3bFD46VS9vhi6SlWYK+FtmJW4vhLsRUoY2wrcWdLcfRDph2BMC58WopshJ2LLj2BR46qfxrrMIbBtzMUzQyiOHbUcc9dBLwputp+7DoqJ4RPn2jfz9mZkuNz3Zw7dtT5NBl5LTStT65an1YiGWG3/iJr3m1enzrqGBulR/zhHuVN/+Gco46eebjvTEy8pMQ+raOOet7wb9Qmuo563vDvZHocxxvlYP41ZHbGZozDF1fQrB4S6bNNuQ9R7r24wOzFS9DZWIEjHCS9ipq9eAnaZvjrCnR+iRcX6BSwEpq9ah1UTGLXfdmmjKF4gQ4hgiAI8j+n8Nf+y/TMi9o3rOfNYGCwZWwz7HNmfp/6YTPCk62wMJF96oMBG3z5S8hFj+1i2PtfZtKb1vQqNRN9D4VHu/bEQxUSpoC9ZoSAq95JIWUtDy1DkgUzyfsChscoKNMKv9927l0R9b5JhXQ/63Dt1oQft+BBYW6/7GXPlQedMoyOuwjR2Qf2ViC0l3SvlgrFha2kp/c8/5Qb6Sl0YqIG4Y3Cz1wwN2lmVoJFmldulb/ZI7s0SeX7WORculyYwJdZQhjdqPVPfuwymtsh/QsKg32cVe5hs2tD6zw5EDcv9USkfEIz+V+kSZJ8fzlHX+FCuHSqFaZOrjbWEbvFdcMEUQcoT/SRRMCKiw0jsII7pYQHC7VL1uOhEyXqIxFZcVnhJJOV39zTdpjldRAPPHbwIW151LWe6nMibpgo7yv0hUsSpdCNU+rpRQdmVlCWL6FUbX01IzAJcdksEXqNekpcL+TEnFDH1NXbZGl8WaGjtOhLmF7JX0oLBJMv06WwpnhD4DKtMPZumqrrK9zLeFBqhYTQZFdWnmt/97diU+7CFOxha6OQSssJhcCYgrU0D0M1nE8JrcowhVFFPrusMNzSWN4zloJUANCBbz4JPjd8C9etlTcpCvjp+wKPFGZEJapAjXfCEyMwnKm4Vyy0vxW/7XJYWIIvizH1YYmiOlE5tBpL9JRdsARFz67Bm8jjjeW3fl5Q63t+VERvOKmFy/TisJl228o+HmqQuGWirquwSKme0ASF1iHYyeLXpfRLahWa4lQKle5IWeVW2rNKqtxe50PSsj0y453BClQto/c0Gd7NBKR02JsmWyHjZ2toltZvrrRCwKsDhXa3YEo67lUU8IzYPAsUss/T89481zNLh6Fip1Zhu9fb5a0FRQHlCC/F0btr6H7pNHkQXmelDG399fsKXd1UpM1EQ7dNI82l2vL5tCIeqTYreJsTrZA02yZTCDv64y8ZZYw/zVhH4SFrcM1VdSorL6niXwf5cBAFb4HSuG6yQmLuK0MEu2kVbq9dSrneOXFWYcxVq46qAMuMwnaCt69QmCwWdBSeLhNeHhgEaPmn5uJAYaD28MvsURqPnEkvgByRE12WNymE8Axk4Udr17FCyArsIDNwxkmrsHXgvkJ6TuFJLM082SbOkiQ+qOSpHLMIZUMB3jY1d5P5nxawqky+zVvaOio8q4aiWrMdXVI4401QWYIYo7BNUDcorOWPrr5mklmFkvdQFaSnv0PwqZ0VtUH2FoX58cEzClet1c50IIXd62HzRqeE/sma5agFhTDr6lh7R4UyyXWtGUShjMnM1LbCeqnNBx/MZIkIHk3ryw33oRTuaLNDEuY/b1J4HGmkQpv8Sk8rLPhbYS8Un41Ytbjqxg7HtQohUTFo1Xy8cfc2hTJCtqMYvNTTjGQdOdEsFSaWph5l5TqYzGXritt6F6v27Zebc36o0ImhOSAOMtCR7EaFXaBJUKjhDO8gO1xVpRQuIcRQwbhsqIrE3lptDbM3/77CrWwunyiU/ZRGISMcFBYZU/lQ0CCVvSalUNB2GTAcNEbsGWVG4Uz2NtSdQkZ6qP1SAdEjJyybVNQjsgyjkDHdn+Jp65Vw0s27F5fJdHqyQTKQB20qXyRT0wmuYxnc833krKbTBCIC/G96rit5nnErX3702zup5ngtP/TQ4zT7XN5zI4Pmn+n0jzoS1Yls3xympoIqmTKQ20p5Z6LiDjsmzs2lHh2Swdt7yArHe03r9u+rB2nsUM2ifJ+n9PY489+nogzqP3vdRapbHXbWL7FS/BzFKuecx7dmipHwooWHIAiCIAiCIAiCIAiCIAiCIAiCIAiCIAiCIAiCIAiCIAiCIAiCIAiCIAjyY/4F4A9pfKwPgUgAAAAASUVORK5CYII=" alt="Generic placeholder image" width="140" height="140">
+              <h2>PharmEasy</h2>
+              <p>PharmaEasy offers 1 Lakh+ products for you to choose from – the app fulfills your healthcare needs with quality service. It offers delivery in 24-48 hours across 1.2k+ cities in India. The app allows scheduled refill reminders and cash-on-delivery service.</p>
+              <p><a class="btn btn-secondary" href="https://pharmeasy.in/" role="button">View details &raquo;</a></p>
+            </div><!-- /.col-lg-4 -->
+            <div class="col-lg-4">
+              <img class="rounded-circle" src="https://pbs.twimg.com/profile_images/1425768660094709761/-StkQjRo.jpg" alt="Generic placeholder image" width="140" height="140">
+              <h2>Apollo Pharmacy</h2>
+              <p>Apollo Pharmacy, accredited with International Quality Certification, offers more than 5,000+ products in various categories. With 3,000+ outlets in key locations, it offers round-the-clock service. 
+            </p>
+              <p><a class="btn btn-secondary" href="https://www.apollopharmacy.in/" role="button">View details &raquo;</a></p>
+            </div><!-- /.col-lg-4 -->
+            <div class="col-lg-4">
+              <img class="rounded-circle" src="https://upload.wikimedia.org/wikipedia/commons/7/71/Medlife_International_Pvt_Ltd-logo.jpg" alt="Generic placeholder image" width="140" height="140">
+              <h2>Medlife</h2>
+              <p>Medlife is your one-stop-shop app for all your medicines. To order, one simply needs to upload a valid prescription and confirm it on call. If the customer does not have a prescription, they can even consult a ‘Medlife doctor.’ Additionally, one can also book a Lab Test with them.</p>
+              <p><a class="btn btn-secondary" href="https://www.medlife.com/" role="button">View details &raquo;</a></p>
+            </div><!-- /.col-lg-4 -->
+          </div><!-- /.row -->
+
+
+      </div><!-- /.container -->
+
+    </main>
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery-slim.min.js"><\/script>')</script>
+    <script src="../../assets/js/vendor/popper.min.js"></script>
+    <script src="../../dist/js/bootstrap.min.js"></script>
+    <!-- Just to make our placeholder images work. Don't actually copy the next line! -->
+    <script src="../../assets/js/vendor/holder.min.js"></script>
+  </body>
+</html>
